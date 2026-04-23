@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? 'https://your-frontend-url.onrender.com'
+    ? 'https://lost-found-mern-0l38.onrender.com'
     : 'http://localhost:3000',
   credentials: true
 }));
