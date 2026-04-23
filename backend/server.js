@@ -1,5 +1,12 @@
 const express = require('express');
+// In server.js, update CORS
 const cors = require('cors');
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? 'https://your-frontend-url.onrender.com' 
+    : 'http://localhost:3000',
+  credentials: true
+}));
 const dotenv = require('dotenv');
 const connectDB = require('./config/database');
 
